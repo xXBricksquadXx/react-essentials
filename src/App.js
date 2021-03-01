@@ -10,6 +10,14 @@ function Header () {       // A component is a function that returns UI
   );
 }
 
+function Main() {
+  return (
+    <section>
+      <p>Data Management</p>
+    </section>
+  );
+}
+
 
 
 
@@ -17,7 +25,7 @@ function App() {
   return (                                                      //create a component by creating a function, the function returns jsx
     <div className="App">
     <Header />                                          
-    <h2>Main</h2>
+    <Main />
     <h3>Footer</h3>
      
     </div>
