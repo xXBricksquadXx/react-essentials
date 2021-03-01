@@ -16,8 +16,8 @@ function Main(props) {
     <section>
       <p>{props.content} Management</p>
       <ul style={{ textAlign: "left"}}>
-        {props.assets.map((asset) => (
-          <li>{asset}</li>
+        {props.assets.map((asset, i) => (
+          <li key={i}>{asset}</li>
         ))}                                                     
       </ul>
     </section>
@@ -36,7 +36,8 @@ function Footer(props){
 const assets = [
   "Precision",
   "Cultural Diversity",
-  "Plans Carefully"
+  "Plans Carefully",
+  "Fresh"
 ];
 
 
