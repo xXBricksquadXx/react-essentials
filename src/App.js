@@ -9,14 +9,19 @@ function RegularComponent() {
 
 }
 
-                                                                                     //use state returns an array   
+                                                                                     //use state returns an array, 'feeling' is the state variable, 2nd will update state  
 function App() {
-  const [feeling] = useState("hungry");
+  const [feeling, setFeeling] = useState("hungry");
  
 return(
   <>
   <h1>Current feeling is {feeling}...</h1>
+  <button onClick={() => setFeeling("hungry")}>hungry</button>
+  <button onClick={() => setFeeling("hangry")}>
+  hangry
+  </button>
+  <button onClick={() => setFeeling("A little better..")}> Enthuse</button>
   </>
-);  }
-
+);  
+}
 export default App;   
