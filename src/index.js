@@ -5,7 +5,10 @@ import App from "./App"
 
 
 
-ReactDOM.render(<App />,
+ReactDOM.render(
+
+<App  authorized={false}/>,
+
   document.getElementById('root') // second argument is where we want to put it.
 );
 
