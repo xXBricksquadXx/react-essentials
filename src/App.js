@@ -41,6 +41,9 @@ const assets = [
 ];
 
 
+const assetObjects = assets.map((asset , i) => ({id: i, title: asset }));
+console.log(assetObjects);
+
 
 
 
