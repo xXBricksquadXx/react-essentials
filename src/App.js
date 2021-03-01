@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function SecretComponent() {
@@ -12,7 +12,12 @@ function RegularComponent() {
                                                                                      //use state returns an array, 'feeling' is the state variable, 2nd will update state  
 function App() {
   const [feeling, setFeeling] = useState("hungry");
+
+  useEffect(() => {
+    console.log(`Im ${feeling} af tho..`);
+  }, [feeling]);
  
+
 return(
   <>
   <h1>Current feeling is {feeling}...</h1>
@@ -20,7 +25,7 @@ return(
   <button onClick={() => setFeeling("hangry")}>
   hangry
   </button>
-  <button onClick={() => setFeeling("A little better..")}> Enthuse</button>
+  <button onClick={() => setFeeling("Good Looking")}> Enthuse</button>
   </>
 );  
 }
