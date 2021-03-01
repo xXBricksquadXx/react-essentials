@@ -11,10 +11,10 @@ function Header (props) {
   );
 }
 
-function Main() {
+function Main(props) {
   return (
     <section>
-      <p>Data Management</p>
+      <p>{props.content} Management</p>
     </section>
   );
 }
@@ -35,7 +35,7 @@ function App() {
   return (                                                      //create a component by creating a function, the function returns jsx
     <div className="App">
     <Header  name="MY"/>                                    
-    <Main />
+    <Main  content="THE"/>
     <Footer />
      
     </div>
