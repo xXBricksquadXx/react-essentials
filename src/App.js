@@ -15,7 +15,7 @@ function Main(props) {
   return (
     <section>
       <p>{props.content} Management</p>
-      <ul>
+      <ul style={{ textAlign: "left"}}>
         {props.assets.map((asset) => (
           <li>{asset}</li>
         ))}                                                     
