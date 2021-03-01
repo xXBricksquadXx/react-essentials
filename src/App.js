@@ -26,7 +26,15 @@ function Footer(props){
     </footer>
 
   )
-}
+}                                       //display list in main comp
+
+const assets = [
+  "Precision",
+  "Cultural Diversity",
+  "Plan Carefully"
+];
+
+assets.map((asset) => console.log(asset))
 
 
 
