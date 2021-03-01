@@ -15,7 +15,7 @@ function Main(props) {
   return (
     <section>
       <p>{props.content} Motivation</p>
-<img src={lion} height={400}/>
+<img src={lion} height={400} alt="Fierce as a Lion"/>
       <ul style={{ textAlign: "left"}}>
         {props.assets.map((asset) => (
           <li key={asset.id}>{asset.title}</li>
