@@ -11,19 +11,25 @@ function RegularComponent() {
 
                                                                                      //use state returns an array, 'feeling' is the state variable, 2nd will update state  
 function App() {
-  const [feeling, setFeeling] = useState("hungry");
+  const [feeling, setFeeling] = useState("Gucci");
+  const [secondary, setSecondary] = useState("✈️");
 
   useEffect(() => {
     console.log(`Im ${feeling} af tho..`);
-  }, [feeling]);
+  },[feeling] );
+
+  useEffect(() => {
+    console.log(`Im ${secondary} af tho..`);
+  }, [secondary]);
  
 
 return(
   <>
-  <h1>Current feeling is {feeling}...</h1>
-  <button onClick={() => setFeeling("hungry")}>hungry</button>
-  <button onClick={() => setFeeling("hangry")}>
-  hangry
+  <h1>Current feeling is {feeling}...{secondary}</h1>
+  <button onClick={() => setFeeling("Gucci")}>Gucci</button>
+  <button onClick={() => setSecondary("✈")}>Fly</button>
+  <button onClick={() => setFeeling("Airplane Mode")}>
+  Airplane Mode
   </button>
   <button onClick={() => setFeeling("Good Looking")}> Enthuse</button>
   </>
