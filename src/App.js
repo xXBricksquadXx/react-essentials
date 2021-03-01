@@ -16,8 +16,8 @@ function Main(props) {
     <section>
       <p>{props.content} Management</p>
       <ul style={{ textAlign: "left"}}>
-        {props.assets.map((asset, i) => (
-          <li key={i}>{asset}</li>
+        {props.assets.map((asset) => (
+          <li key={asset.id}>{asset.title}</li>
         ))}                                                     
       </ul>
     </section>
@@ -52,7 +52,7 @@ function App() {
   return (                                                      //using curly braces bc we passing the variable..
     <div className="App">
     <Header  name="MY"/>                                    
-    <Main  content="THE" assets={assets}/>
+    <Main  content="THE" assets={assetObjects}/>
     <Footer year={new Date().getFullYear()}/>
      
     </div>
