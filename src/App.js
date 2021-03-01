@@ -17,12 +17,12 @@ function Main(props) {
       <p>{props.content} Management</p>
     </section>
   );
-}
+}                                                             //when we render the components we pass the properties into the components
 
-function Footer(){
+function Footer(props){
   return(
     <footer>
-      <p>I dont Get Tired...</p>
+      <p>I dont Get Tired...{props.year}</p>
     </footer>
 
   )
@@ -36,7 +36,7 @@ function App() {
     <div className="App">
     <Header  name="MY"/>                                    
     <Main  content="THE"/>
-    <Footer />
+    <Footer year={new Date().getFullYear()}/>
      
     </div>
   );
