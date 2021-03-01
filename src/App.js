@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 
 function SecretComponent() {
@@ -8,11 +9,13 @@ function RegularComponent() {
 
 }
 
-
-function App({authorized}) {
+                                                                                     //use state returns an array   
+function App() {
+  const what = useState();
+  console.log(what)
 return(
   <>
-  {authorized ? <SecretComponent /> : <RegularComponent />}
+  <h1>hello</h1>
   </>
 );  }
 
