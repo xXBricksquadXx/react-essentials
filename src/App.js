@@ -2,7 +2,7 @@
 import './App.css';
 
 function Header (props) { 
-      console.log(props);  // pass props into function and hold all of the properties for this component
+       // pass props into function and hold all of the properties for this component
   return (                                      // props name has been passed as a key
     <header>
       <h1>{props.name} Business</h1> 
@@ -15,8 +15,13 @@ function Main(props) {
   return (
     <section>
       <p>{props.content} Management</p>
+      <ul>
+        {props.assets.map((asset) => (
+          <li>{asset}</li>
+        ))}                                                     
+      </ul>
     </section>
-  );
+  );                                
 }                                                             //when we render the components we pass the properties into the components
 
 function Footer(props){
@@ -31,19 +36,19 @@ function Footer(props){
 const assets = [
   "Precision",
   "Cultural Diversity",
-  "Plan Carefully"
+  "Plans Carefully"
 ];
 
-assets.map((asset) => console.log(asset))
+
 
 
 
 
 function App() {
-  return (                                                      //create a component by creating a function, the function returns jsx
+  return (                                                      //using curly braces bc we passing the variable..
     <div className="App">
     <Header  name="MY"/>                                    
-    <Main  content="THE"/>
+    <Main  content="THE" assets={assets}/>
     <Footer year={new Date().getFullYear()}/>
      
     </div>
