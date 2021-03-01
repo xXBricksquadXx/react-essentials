@@ -18,6 +18,15 @@ function Main() {
   );
 }
 
+function Footer(){
+  return(
+    <footer>
+      <p>I dont Get Tired...</p>
+    </footer>
+
+  )
+}
+
 
 
 
@@ -26,7 +35,7 @@ function App() {
     <div className="App">
     <Header />                                          
     <Main />
-    <h3>Footer</h3>
+    <Footer />
      
     </div>
   );
