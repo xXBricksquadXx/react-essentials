@@ -11,11 +11,11 @@ function RegularComponent() {
 
                                                                                      //use state returns an array   
 function App() {
-  const what = useState();
-  console.log(what)
+  const [feeling] = useState("hungry");
+ 
 return(
   <>
-  <h1>hello</h1>
+  <h1>Current feeling is {feeling}...</h1>
   </>
 );  }
 
