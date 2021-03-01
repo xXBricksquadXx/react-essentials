@@ -1,5 +1,5 @@
-
 import './App.css';
+import lion from "./lion.jpg"
 
 function Header (props) { 
        // pass props into function and hold all of the properties for this component
@@ -14,7 +14,8 @@ function Header (props) {
 function Main(props) {
   return (
     <section>
-      <p>{props.content} Management</p>
+      <p>{props.content} Motivation</p>
+<img src={lion} height={400}/>
       <ul style={{ textAlign: "left"}}>
         {props.assets.map((asset) => (
           <li key={asset.id}>{asset.title}</li>
