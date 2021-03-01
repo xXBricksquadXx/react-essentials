@@ -5,7 +5,11 @@ import './index.css';
 
 
 ReactDOM.render(
-React.createElement("h1", {style: {color: "blue"}}, "Bricksquad!!!"), //first argument  is what we want to create
+<ul>
+  <li>Monday</li>
+  <li>Tuesday</li>
+  <li>Wednesday</li>
+</ul>,
   document.getElementById('root') // second argument is where we want to put it.
 );
 
